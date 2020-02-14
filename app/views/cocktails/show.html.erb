@@ -1,0 +1,22 @@
+
+<h1><%= @cocktail.name %></h1>
+
+
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= @cocktail.name %></h2>
+      <% @cocktail.doses.each do |dose| %>
+      <p><%= dose.description %></p>
+    </div>
+    <h2 class="card-trip-pricing"><%= dose.ingredient.name %></h2>
+      <% end %>
+  </div>
+</div>
+
+
+
+<%= link_to 'update dose', new_cocktail_dose_path(@cocktail)%>
+
+<%= link_to 'Back', cocktails_path %>

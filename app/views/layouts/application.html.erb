@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
     <title>RailsMisterCocktail</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+       <a class="navbar-brand" href="#">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/511Uh-pXyjL._AC_SX522_.jpg" />
+      </a>
+
+<%= link_to "add cocktail", new_cocktail_path, {:style=>'color:#FFFFFF; text-align:left', :class => "btn btn-primary"} %>
+
+    </div>
+
     <%= yield %>
+
   </body>
 </html>

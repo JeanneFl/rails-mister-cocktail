@@ -1,0 +1,16 @@
+// Import your components CSS files here.
+@import "alert";
+@import "avatar";
+@import "navbar";
+@import "card";
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+body {
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 42%, rgba(9,9,121,1) 79%, rgba(0,212,255,1) 100%);
+  width: 100%
+}
